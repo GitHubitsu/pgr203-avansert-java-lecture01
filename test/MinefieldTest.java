@@ -10,19 +10,19 @@ public class MinefieldTest {
     @Test
     void shouldEmptyField(){
         String[] expected = { "0" };
-        assertArrayEquals(new Minesweeper(new String[]{ "." }).getHints(), expected);
+        assertArrayEquals(expected, new Minesweeper(new String[]{ "." }).getHints());
     }
 
     @Test
     void shouldShowTallMinefields(){
         String[] expected = { "0", "0", "0" };
-        assertArrayEquals(new Minesweeper(new String[]{ ".", ".", "." }).getHints(), expected);
+        assertArrayEquals(expected, new Minesweeper(new String[]{ ".", ".", "." }).getHints());
     }
 
     @Test
     void shouldShowWideMinefields(){
         String[] field = { "....", "....", "...." };
         String[] expected = { "0000", "0000", "0000" };
-        assertArrayEquals(new Minesweeper(field).getHints(), expected);
+        assertArrayEquals(expected, new Minesweeper(field).getHints());
     }
 }
