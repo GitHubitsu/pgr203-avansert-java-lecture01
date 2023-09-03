@@ -25,4 +25,11 @@ public class MinefieldTest {
         String[] expected = { "0000", "0000", "0000" };
         assertArrayEquals(expected, new Minesweeper(field).getHints());
     }
+
+    @Test
+    void shouldShowFullMinefields(){
+        String[] field = { "****", "****", "****" };
+        String[] expected = { "****", "****", "****" };
+        assertArrayEquals(expected, new Minesweeper(field).getHints());
+    }
 }
